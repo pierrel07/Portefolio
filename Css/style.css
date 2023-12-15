@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Dhurjati&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Oswald&display=swap');
 * {
   box-sizing: border-box;
     margin: 0;
@@ -5,27 +8,149 @@
     font-family: "roboto",sans-serif;
 
 }
+
+main{
+  background: rgb(0, 147, 233);
+  min-height: 500px;
+  width: 90% ;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  box-shadow: 0px 0px 20px 4px black;
+  padding: 15px;
+
+
+}
+h1{
+  text-transform: uppercase;
+  letter-spacing: 3;
+  text-align: center;
+  font-size:2.5rem;
+  font-family: 'DM Serif Display', serif;
+  text-shadow: 2px 2px 4px rgba(2, 39, 173, 0.483);
+  
+}
+
+h2{
+  margin: 0;
+  margin-top: 2px;
+  font-family: 'Oswald', sans-serif;
+}
+.edito{
+  list-style: none;
+  text-align: center;
+  min-height: 300px;
+  padding: 10px;
+  margin-top: 2px;
+
+
+
+}
+.edito li{
+  list-style: none;
+  font-family: 'DM Serif Display', serif;
+}
+.flexbox{
+  text-align: center;
+  min-height: 300px;
+  border: 2px solid rgb(9, 9, 9);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  background: #82cff3;
+  box-shadow: 0px 0px 20px 4px black;
+
+
+}
+.grid{
+  text-align: center;
+  border: 2px solid rgb(2, 1, 4);
+  background: #4273f1;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  background: #82cff3;
+  box-shadow: 0px 0px 20px 4px black;
+
+
+  
+}
+.flexbox li{
+  list-style: none;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+  background: rgb(211, 165, 219);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 4px black;
+  
+  
+  
+}
+.flexbox li:hover{
+  -webkit-animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    opacity: 1; /* Opacity set to 1 on hover */
+}
+.flexbox ul{
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+  
+form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+   "i1 i2"
+   "ta ta"
+   "vi bt";
+
+}
+input, textarea{
+  margin: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+
+}
+textarea{
+  grid-area: ta;
+  height: 40px;
+  resize: none ;
+
+}
+#btn-submit{
+  grid-area: bt;
+  cursor: pointer;
+  background: #0eba7b;
+  transition: 0.2s;
+}
+#btn-submit:hover{
+  background: #0093E9;
+  color: white;
+}
 img{
-  position: absolute;
+  /* position: absolute;
   top: 25px;
-  right: 25px;
+  right: 25px; */
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
   border: 2px solid lightblue;
   border-radius: 50%;
-  width: 90px;
+  width: 25%;
   height: auto;
 
 }
-#img1{
-  position: relative;
-  top: 50px;
-  right: 50px;
-  border: 2px solid lightblue;
-  border-radius: 5%;
-  max-width: 500px;
-  height: auto;
 
-}
-header{
+body{
   
    /* Add a black background color to the top navigation */
 .topnav {
@@ -34,6 +159,9 @@ header{
   justify-content: space-around;
   background-color: #333;
   overflow: hidden;
+}
+.myTopnav{
+  margin-top: 0px;
 }
 
 /* Style the links inside the navigation bar */
@@ -71,108 +199,18 @@ margin-right: 70%;
   display: none;
 } 
 }
-
-
-
-
-
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+section {
+  min-height: 200px;
+  padding: 20px 0;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius:  15px 15px;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 15px 15px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-
-}
 body {
-    
-    width: 80%;
+    height: 500px;
+    width: 100%;
     margin: auto;
     background-color: #d9afd8;
     background-image: linear-gradient(45deg, #d9afd8 0%, #97e1e1 100%);
+    min-height: 100vh;
 
 }
 @media screen and (max-width: 768px) {
@@ -251,3 +289,44 @@ body {
   .footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
   
   .footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+  /* ----------------------------------------------
+ * Generated by Animista on 2023-12-15 5:38:49
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation flip-2-hor-top-1
+ * ----------------------------------------
+ */
+@-webkit-keyframes flip-2-hor-top-1 {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0);
+            transform: translateY(0) rotateX(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+  }
+  100% {
+    -webkit-transform: translateY(-100%) rotateX(-180deg);
+            transform: translateY(-100%) rotateX(-180deg);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+}
+@keyframes flip-2-hor-top-1 {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0);
+            transform: translateY(0) rotateX(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+  }
+  100% {
+    -webkit-transform: translateY(-100%) rotateX(-180deg);
+            transform: translateY(-100%) rotateX(-180deg);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+}
