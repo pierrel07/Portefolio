@@ -23,7 +23,7 @@ main{
 }
 h1{
   text-transform: uppercase;
-  letter-spacing: 3;
+  letter-spacing: 3px;
   text-align: center;
   font-size:2.5rem;
   font-family: 'DM Serif Display', serif;
@@ -150,19 +150,12 @@ img{
 
 }
 
-body{
-  
-   /* Add a black background color to the top navigation */
+/* Add a black background color to the top navigation */
 .topnav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   background-color: #333;
   overflow: hidden;
 }
-.myTopnav{
-  margin-top: 0px;
-}
+
 
 /* Style the links inside the navigation bar */
 .topnav a,
@@ -175,8 +168,10 @@ body{
 margin-right: 70%;
 }
 .topnav a{
-  display: block;
+  float: left;
+  color: #f2f2f2;
   text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -198,7 +193,7 @@ margin-right: 70%;
 .topnav .icon {
   display: none;
 } 
-}
+
 section {
   min-height: 200px;
   padding: 20px 0;
